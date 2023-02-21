@@ -115,19 +115,21 @@ label:focus-within{
     display: none;
 }
 .players {
-    width: 500px;
+    width: 600px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     color: var(--brand-color-1);
     font-family: var(--font-1);
+    font-size: 20px;
 }
 
 .player--active{
     color: var(--brand-color-4);
-    text-decoration: underline wavy;
-    text-underline-offset: 10px;
-    text-decoration-color: var(--brand-color-3);
-    text-decoration-thickness: 2px;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 1px;
+    border-color: var(--brand-color-1);
+    padding: 0 16px;
 }
 
 .game_board {
@@ -159,6 +161,40 @@ label:focus-within{
     user-select: none;
 }
 
+.winner{
+    display: none;
+    /* opacity: 0;
+    transition: opacity 1s ease-in; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 180px;
+    background-color: var(--brand-color-2);
+    color: var(--brand-color-1);
+    font-family: var(--font-1);
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.restart_btn{
+    font-size: 20px;
+    font-family: var(--font-2);
+    font-weight: 800;
+    color: var(--brand-color-1);
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    /* border-width: 1px;
+    border-color: var(--brand-color-4); */
+    transition: color 0.3s, scale 0.2s;
+    cursor: pointer;
+}
+
+.restart_btn:hover{
+    color: var(--brand-color-4);
+}
 
 footer {
     font-family: var(--font-2);
