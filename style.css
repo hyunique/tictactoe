@@ -125,11 +125,13 @@ label:focus-within{
 
 .player--active{
     color: var(--brand-color-4);
+    scale: 1.2;
+    /* border: 1px solid var(--brand-color-1); */
+    /* border-radius: 50%;
     border-style: solid;
-    border-radius: 50%;
     border-width: 1px;
-    border-color: var(--brand-color-1);
-    padding: 0 16px;
+    border-color: var(--brand-color-1); */
+    /* padding: 0 16px; */
 }
 
 .game_board {
@@ -161,6 +163,16 @@ label:focus-within{
     user-select: none;
 }
 
+.modal_background{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(75, 75, 75, 0.102);
+    backdrop-filter: blur(2px);
+}
 .winner{
     display: none;
     /* opacity: 0;
@@ -169,7 +181,7 @@ label:focus-within{
     top: 50%;
     left: 50%;
     width: 300px;
-    height: 180px;
+    height: 240px;
     background-color: var(--brand-color-2);
     color: var(--brand-color-1);
     font-family: var(--font-1);
@@ -177,22 +189,23 @@ label:focus-within{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 40px;
+    border: 1px dotted var(--brand-color-3);
 }
 
-.restart_btn{
+.restart_btn, .tryagain_btn{
     font-size: 20px;
     font-family: var(--font-2);
     font-weight: 800;
     color: var(--brand-color-1);
     background-color: rgba(255, 255, 255, 0);
     border: none;
-    /* border-width: 1px;
-    border-color: var(--brand-color-4); */
+    margin:10px;
     transition: color 0.3s, scale 0.2s;
     cursor: pointer;
 }
 
-.restart_btn:hover{
+.restart_btn:hover, .tryagain_btn:hover{
     color: var(--brand-color-4);
 }
 
